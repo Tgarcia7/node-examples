@@ -1,4 +1,4 @@
-# NODE_EXAMPLES
+# NODE-EXAMPLES
 
 Set of mini-projects written in Node.js to implement different techniques, ideas and modules.
 
