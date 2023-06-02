@@ -1,6 +1,6 @@
 # NODE_EXAMPLES
 
-Small Node.js projects to implement different techniques, ideas and modules.
+Set of mini-projects written in Node.js to implement different techniques, ideas and modules.
 
 ### Contents
 
