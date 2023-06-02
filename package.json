@@ -1,15 +1,16 @@
 {
   "name": "node-examples",
   "version": "1.0.0",
-  "description": "",
+  "description": "Small Node.js projects to implement different techniques, ideas and modules",
   "main": "index.js",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ./",
+    "lint:fix": "eslint ./ --fix"
+  },
   "author": "Tey García <tgarciamiranda@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": "14.x"
-  },
-  "dependencies": {
-    "axios": "^0.21.0"
+  "devDependencies": {
+    "eslint": "^8.41.0"
   }
 }

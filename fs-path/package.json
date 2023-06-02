@@ -1,0 +1,12 @@
+{
+  "name": "node-examples-fs-path",
+  "version": "1.0.0",
+  "description": "Code examples of some of the most common Node.js core modules",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Tey García <tgarciamiranda@gmail.com>",
+  "license": "MIT"
+}

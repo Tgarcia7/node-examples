@@ -1,4 +1,25 @@
-node_modules
-.DS_store
+# Local env files
+.env.local
+.env.*.local
+.env
+
+# Log files
+npm-debug.log*
 logs
+
+# Temp files
 downloads
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+node_modules
+.DS_Store
+
+# Test files
+junit/*

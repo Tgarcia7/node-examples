@@ -1,4 +1,5 @@
-const https = require('https')
+import * as https from 'https'
+
 const options = {
   hostname: 'pokeapi.co',
   path: '/api/v2/pokemon/ditto',
@@ -7,7 +8,7 @@ const options = {
 }
 
 const req = https.request(options, res => {
-  console.log(`statusCode: ${res.statusCode}`)
+  console.info(`statusCode: ${res.statusCode}`)
 
   res.on('data', d => {
     process.stdout.write(d)

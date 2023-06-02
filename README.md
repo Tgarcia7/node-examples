@@ -1,3 +1,12 @@
-## node-examples
+# NODE_EXAMPLES
 
-Code examples of some of the most common Node.js core modules. 
+Small Node.js projects to implement different techniques, ideas and modules.
+
+### Contents
+
+* [dependency-injection](./dependency-injection/)
+* [fs + path example](./fs-path/)
+* [http example](./http/)
+* [os](./os/)
+* [proxy-server](./proxy-server/)
+* [streams example](./streams/)

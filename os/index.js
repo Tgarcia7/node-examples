@@ -1,7 +1,6 @@
-'use strict'
-const os = require('os');
+import * as os from 'os'
 
-(function () {
+(() => {
   const osInfo = {
     arch: os.arch(),
     cpus: os.cpus().length,
@@ -15,6 +14,6 @@ const os = require('os');
     userInfo: os.userInfo()
   }
 
-  console.log('Environment', process.env)
-  console.log('\nOS info', osInfo)
+  console.info('Environment', process.env)
+  console.info('\nOS info', osInfo)
 })()

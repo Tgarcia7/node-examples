@@ -1,6 +1,7 @@
-'use strict'
-const fs = require('fs') // .promises to promisify all
-const path = require('path')
+import * as fs from 'fs'
+import * as path from 'path'
+
+const __dirname = new URL('.', import.meta.url).pathname
 
 // Create dir if not exists (async)
 async function createDir(newDir) {
@@ -9,10 +10,8 @@ async function createDir(newDir) {
   try {
     await fs.promises.access(directoryPath)
   } catch (error) {
-    writeLog('error', error)
     fs.promises.mkdir(directoryPath)
   }
-
 }
 
 // Create temp dir (callbacks) 
@@ -59,9 +58,8 @@ async function writeLog(code, message) {
 }
 
 // Read log
-
 function formatDate(date) {
-  let d = new Date(date),
+  const d = new Date(date),
     month = '' + (d.getMonth() + 1),
     day = '' + d.getDate(),
     year = d.getFullYear(),
@@ -76,15 +74,19 @@ function formatDate(date) {
   return `${[year, month, day].join('-')} ${h}:${s}`
 }
 
-
-(async function () {
-  await createDir('logs')
-  await createLogFile()
+(async function() {
+  try {
+    await createDir('logs')
+    await createLogFile()
   
-  createDir('//downloads/')
+    createDir('//downloads/')
+    
+    const tempDirLocation = await createTempDir()
+    removeTempDir(tempDirLocation)
   
-  const tempDirLocation = await createTempDir()
-  removeTempDir(tempDirLocation)
-
-  writeLog('success', 'App started correctly')
+    writeLog('success', 'App started correctly')
+    console.info('Checkout /logs to see the results')
+  } catch (error) {
+    console.info('ERROR>>>', error)
+  }
 })()

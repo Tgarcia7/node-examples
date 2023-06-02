@@ -1,8 +1,6 @@
-'use strict'
-
-import awilix from "awilix"
-import Database from "./database.js"
-import User from "./user.js"
+import awilix from 'awilix'
+import Database from './database.js'
+import User from './user.js'
 
 const container = awilix.createContainer({
   injectionMode: awilix.InjectionMode.PROXY

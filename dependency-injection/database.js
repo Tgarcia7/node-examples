@@ -1,11 +1,9 @@
-'use strict'
-
 class Database {
   constructor() {
-    console.log("Initialize the database connection")
+    console.info('Initialize the database connection')
   }
 
-  query(sql) {
+  query(_sql) {
     // Execute a SQL query on the database
   }
 }

@@ -1,0 +1,19 @@
+{
+  "name": "node-examples-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start-server": "node server.js",
+    "start-client": "node client.js"
+  },
+  "author": "Tey García <tgarciamiranda@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
